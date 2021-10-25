@@ -1,0 +1,2 @@
+# malloc_preload
+LINUX下MALLOC-HOOK的一种方式，通过LD_PRELOAD实现底层内存分配与释放的统计，可用于定位内存泄漏等场景
