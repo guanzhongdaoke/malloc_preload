@@ -1,0 +1,1 @@
+g++ -Wall -std=c++11 -pthread Main.cpp Main_signal.cpp -o Hello
