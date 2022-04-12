@@ -39,6 +39,7 @@ static int g_preloadmalloclogmaxsize = 10000000;// 记录分配的最大字节数-大于该数
 static long long int g_preloadmallocaddrlow = 0;// 记录分配的内存区间段-最低内存区间（0表示不用设置）
 static long long int g_preloadmallocaddrhigh = 0;// 记录分配的内存区间段-最高内存区间（0表示不用设置）
 #else
+//  这部分其实没必要用extern，根据LINUX下面动态库的强弱信息覆盖规则，哪怕执行文件里面也定义了，但全局也只能有一份，访问的也都是一样的
 extern int g_preLoadmalloclogflag;// 都是记录日志开关
 extern int g_preloadmalloclogminsize;// 记录分配的最小字节数-小于该数字则不需要记录
 extern int g_preloadmalloclogmaxsize;// 记录分配的最大字节数-大于该数据则不需要记录
